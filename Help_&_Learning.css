@@ -1,0 +1,162 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/Images/Help.png') no-repeat center center fixed; /* Set your actual background image path */
+    background-size: cover;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background: rgba(0, 128, 128, 0.9); /* Teal */
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+.logo h1:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation styles */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Golden color on hover */
+    border-bottom: 3px solid #FFD700; /* Enhanced underline effect on hover */
+}
+
+/* Appointment button styling */
+.appointment-button .cta-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #008080; /* Teal for button */
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.appointment-button .cta-button:hover {
+    background: #20B2AA; /* Light Sea Green on hover */
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero h2 {
+    color: #3CB371; /* Medium Sea Green */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Main Content Section */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Sections */
+.intro-section,
+.usage-guide,
+.faq-section {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #3CB371; /* Section header color */
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 15px;
+    color: #008080; /* Dark Teal for subheadings */
+}
+
+ul {
+    margin: 10px 0 10px 20px; /* Indent unordered lists */
+}
+
+ol {
+    margin: 10px 0 10px 20px; /* Indent ordered lists */
+}
+
+/* FAQ Section */
+.faq-section h3 {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.faq-section p {
+    margin: 5px 0 15px 0; /* Margin below paragraphs */
+}
+
+/* Footer Section */
+footer {
+    background: rgba(0, 128, 128, 0.9); /* Teal */
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+footer a {
+    color: #FFD700; /* Golden color */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

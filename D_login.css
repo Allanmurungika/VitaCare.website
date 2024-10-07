@@ -1,0 +1,99 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* Light gray background */
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50; /* Dark green */
+    color: white; /* White text */
+    padding: 15px 20px; /* Padding around header */
+    text-align: center; /* Centered header text */
+}
+
+header h1 {
+    margin-bottom: 10px; /* Space below the title */
+}
+
+nav {
+    margin-top: 10px; /* Space above the navigation links */
+}
+
+nav a {
+    color: white; /* White text for links */
+    text-decoration: none; /* No underline */
+    margin: 0 15px; /* Space between links */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
+
+/* Login Container Styles */
+.login-container {
+    background-color: white; /* White background for form */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    width: 300px; /* Width of the form */
+    margin: 20px auto; /* Center the form with margin */
+}
+
+/* Header Styles inside Login Container */
+.login-container h2 {
+    margin-bottom: 20px;
+    text-align: center; /* Centered title */
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Button Styles */
+button {
+    width: 100%; /* Full width for button */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Message Styles */
+.message {
+    text-align: center; /* Centered message */
+    margin-top: 15px; /* Add some margin on top */
+}
+
+.message a {
+    color: #4CAF50; /* Green link color */
+    text-decoration: none; /* No underline */
+}
+
+.message a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - VitaCare</title>
+    <link rel="stylesheet" href="/CSS/User.css"> 
+</head>
+<body>
+
+    
+    <header>
+        <div class="logo">
+            <h1>VitaCare</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="About_Us.html">About Us</a></li>
+                <li><a href="Contact_us.html">Contact Us</a></li>
+                <li><a href="User.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  
+    <main class="container">
+        <section class="login-section">
+            <h2>Login to Your Account</h2>
+            <form action="dashboard.html" method="POST" id="loginForm"> 
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div class="link">
+                <p>Don't have an account? <a href="#" id="showSignup">Sign Up Here</a></p>
+            </div>
+        </section>
+
+        <section class="signup-section" id="signup" style="display: none;"> 
+            <h2>Create a New Account</h2>
+            <form action="dashboard.html" method="POST" id="signupForm"> 
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Create Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <div class="link">
+                <p>Already have an account? <a href="#" id="showLogin">Login Here</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 VitaCare. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <!-- JavaScript for form toggle -->
+    <script>
+        const showSignupLink = document.getElementById("showSignup");
+        const showLoginLink = document.getElementById("showLogin");
+        const signupSection = document.getElementById("signup");
+        const loginSection = document.querySelector(".login-section");
+
+        // Show signup form
+        showSignupLink.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            loginSection.style.display = "none"; // Hide login section
+            signupSection.style.display = "block"; // Show signup section
+        });
+
+        // Show login form
+        showLoginLink.addEventListener("click", function(event) {
+            event.preventDefault();
+            signupSection.style.display = "none"; // Hide signup section
+            loginSection.style.display = "block"; // Show login section
+        });
+    </script>
+
+</body>
+</html>

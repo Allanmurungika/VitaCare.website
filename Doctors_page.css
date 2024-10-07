@@ -1,0 +1,101 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark text */
+}
+
+/* Header styling */
+header {
+    background: #008080; /* Teal */
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px 0;
+}
+
+/* Container styling */
+.container {
+    padding: 20px;
+}
+
+/* Appointments Section */
+.appointments {
+    margin-bottom: 30px;
+}
+
+.appointments table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.appointments th, .appointments td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.appointments th {
+    background-color: #f8f8f8;
+}
+
+/* Messages Section */
+.messages {
+    margin-bottom: 30px;
+}
+
+.messages ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+}
+
+/* Video Consultation Section */
+.video-button {
+    padding: 10px 15px;
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.video-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer styling */
+footer {
+    background: #008080; /* Teal */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}

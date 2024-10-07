@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Dashboard - VitaCare</title>
+    <link rel="stylesheet" href="/CSS/Doctors_page.css"> <!-- Link to your external CSS file -->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">
+            <h1>VitaCare</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="PatientList.html">Patients</a></li>
+                <li><a href="Appointments.html">Appointments</a></li>
+                <li><a href="Profile.html">Profile</a></li>
+                <li><a href="Messages.html">Messages</a></li>
+                <li><a href="Logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome, Dr. [Doctor's Name]</h2>
+        <p>Manage your patient appointments and information efficiently.</p>
+    </section>
+
+    <!-- Main Content Section -->
+    <main class="container">
+        <!-- Upcoming Appointments Section -->
+        <section class="appointments">
+            <h2>Upcoming Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>2023-10-15</td>
+                        <td>10:00 AM</td>
+                        <td>Confirmed</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>2023-10-16</td>
+                        <td>11:30 AM</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Emily Davis</td>
+                        <td>2023-10-17</td>
+                        <td>2:00 PM</td>
+                        <td>Cancelled</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Patient Messages Section -->
+        <section class="messages">
+            <h2>Recent Messages</h2>
+            <ul>
+                <li><strong>John Doe:</strong> Looking forward to our appointment.</li>
+                <li><strong>Jane Smith:</strong> Have questions about my prescription.</li>
+                <li><strong>Emily Davis:</strong> Is it possible to reschedule?</li>
+            </ul>
+        </section>
+
+        <!-- Video Consultation Section -->
+        <section class="video-consultation">
+            <h2>Start a Video Consultation</h2>
+            <p>If you wish to initiate a video consultation, click the button below.</p>
+            <button class="video-button" onclick="startVideoConsultation()">Start Video Appointment</button>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 VitaCare. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        function startVideoConsultation() {
+            alert('Starting your video consultation...');
+            // Redirect to video chat page
+            window.location.href = 'chat.html';
+        }
+    </script>
+
+</body>
+</html>

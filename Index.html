@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaCare - Online Health Care Platform</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+
+  
+<header>
+    <div class="logo">
+        <h1>VitaCare</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="User.html">User</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Health_Information.html">Health Information</a></li>
+            <li><a href="About_Us.html">About Us</a></li>
+            <li><a href="Help_&_Learning.html">Help & Learning</a></li>
+            <li><a href="Contact_Us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="appointment-button">
+        <a href="Appointment.html" class="cta-button">Get Appointment!</a>
+    </div>
+</header>
+
+
+ 
+    <section class="hero">
+        <h2>A Medical Care You Can Always Trust!</h2>
+        <p>I realized that becoming a doctor, I can only help a small community. But by becoming a doctor, I can help my whole country.</p>
+    </section>
+
+   
+    <section class="location-input">
+        <h2>Find Us Here</h2>
+        <p>Enter your location:</p>
+        <input type="text" id="location" placeholder="Enter your address">
+        <button onclick="geocodeAddress()">Find Location</button>
+    </section>
+
+
+    <section>
+        <h2>Our Location</h2>
+        <div id="map"></div>
+    </section>
+
+ 
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service">
+                <img src="/Images/primary-care.png" alt="Primary Care" />
+                <h3>Primary Care</h3>
+                <p>Comprehensive health services for individuals and families.</p>
+            </div>
+            <div class="service">
+                <img src="/Images/siren.png" alt="Urgent Care" />
+                <h3>Urgent Care</h3>
+                <p>Immediate care for non-life-threatening emergencies.</p>
+            </div>
+            <div class="service">
+                <img src="/Images/conversation.png" alt="Consultation" />
+                <h3>Online Consultation</h3>
+                <p>Consult with healthcare professionals from the comfort of your home.</p>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="testimonials">
+        <h2>What Our Patients Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"I received excellent care and support from the staff!"</p>
+                <h4>- John Doe</h4>
+            </div>
+            <div class="testimonial">
+                <p>"The online services are very convenient for my busy schedule!"</p>
+                <h4>- Jane Smith</h4>
+            </div>
+        </div>
+    </section>
+
+  
+    <footer>
+        <p>&copy; 2023 VitaCare. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+    <script>
+        let map;
+        let marker;
+
+        function initMap() {
+            const location = { lat: -34.397, lng: 150.644 }; // Default location
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: location
+            });
+            marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+
+        function geocodeAddress() {
+            const address = document.getElementById("location").value;
+            const geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({ 'address': address }, (results, status) => {
+                if (status === 'OK') {
+                    map.setCenter(results[0].geometry.location);
+                    marker.setPosition(results[0].geometry.location);
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

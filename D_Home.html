@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Home</title>
+    <link rel="stylesheet" href="/CSS/D_home.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+
+    <header>
+        <h1>Welcome, Dr. Asiimwe</h1>
+        <nav>
+            <a href="doctor_home.html">Home</a>
+            <a href="doctor_chat.html">Chat</a>
+            <a href="appointments.html">Appointments</a>
+            <a href="logout.html">Logout</a> <!-- Link to logout -->
+        </nav>
+    </header>
+
+    <main>
+        <section id="appointmentsSection">
+            <h2>Your Appointments</h2>
+            <table id="appointmentsTable">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Appointment Time</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample appointment records, to be dynamically populated -->
+                    <tr>
+                        <td>Ashaba Joan</td>
+                        <td>10:00 AM</td>
+                        <td>Upcoming</td>
+                        <td><button onclick="startVideoCall('Ashaba Joan')">Start Video Call</button></td>
+                    </tr>
+                    <tr>
+                        <td>Jane Asiimwe</td>
+                        <td>11:30 AM</td>
+                        <td>Upcoming</td>
+                        <td><button onclick="startVideoCall('Jane Asiimwe')">Start Video Call</button></td>
+                    </tr>
+                    <tr>
+                        <td>Aineamaani Wilson</td>
+                        <td>1:00 PM</td>
+                        <td>Completed</td>
+                        <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="chatSection">
+            <h2>Recent Messages</h2>
+            <div id="recentMessages">
+                <!-- Sample message records, to be dynamically populated -->
+                <div class="message">
+                    <strong>John Doe:</strong> "Looking forward to our appointment."
+                </div>
+                <div class="message">
+                    <strong>Jane Smith:</strong> "Can we reschedule?"
+                </div>
+            </div>
+            <button onclick="location.href='doctor_chat.html'">View All Chats</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 @ VitaCare. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function startVideoCall(patientName) {
+            // Redirect to doctor's chat page with the patient specified, if needed
+            alert(`Starting video call with ${patientName}`);
+            window.location.href = 'doctor_chat.html'; // You can also include logic to initialize the call
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment - VitaCare</title>
+    <link rel="stylesheet" href="/CSS/Appointment.css"> 
+
+    
+</head>
+<body>
+
+   
+    <header>
+        <div class="logo">
+            <h1>VitaCare</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="User.html">User</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Health_Information.html">Health Information</a></li>
+                <li><a href="About_Us.html">About Us</a></li>
+                <li><a href="Help_&_Learning.html">Help & Learning</a></li>
+                <li><a href="Contact_Us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section class="hero">
+        <h2>Book Your Appointment</h2>
+        <p>Schedule an appointment with one of our healthcare professionals today!</p>
+    </section>
+
+    
+    <div id="notification">Appointment booked successfully! Click below to start your video consultation.</div>
+    <a id="startVideoChat" href="chat.html/startCallButton" style="display:none;">Start Video Chat</a> <!-- Hidden link for video chat -->
+
+    
+    <main class="container">
+        <section class="appointment-form">
+            <h2>Select a Doctor</h2>
+            <form id="appointmentForm" onsubmit="return bookAppointment(event);">
+                <label for="doctor">Choose a Doctor:</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="" disabled selected>Select a doctor</option>
+                    <option value="Dr. John Smith">Dr. John Smith - Family Medicine</option>
+                    <option value="Dr. Jane Doe">Dr. Jane Doe - Internal Medicine</option>
+                    <option value="Dr. Emily Davis">Dr. Emily Davis - Psychiatry</option>
+                </select>
+
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Select Time:</label>
+                <select id="time" name="time" required>
+                    <option value="" disabled selected>Select a time</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="2:00 PM">2:00 PM</option>
+                    <option value="3:00 PM">3:00 PM</option>
+                </select>
+
+                <h3>Payment Information</h3>
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+
+       
+        <section class="video-consultation">
+            <h2>Video Consultation</h2>
+            <p>If you prefer a remote consultation, please choose the "Video Appointment" option below.</p>
+            <button class="video-button" onclick="startVideoConsultation()">Start Video Appointment</button>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2023 VitaCare. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        function bookAppointment(event) {
+            event.preventDefault(); // Prevent form submission
+            // Simulate booking appointment (you would normally send this data to your server)
+            document.getElementById('notification').style.display = 'block'; // Show notification
+            document.getElementById('startVideoChat').style.display = 'inline-block'; // Show video chat link
+            return false; // Prevent default form submission
+        }
+
+        function startVideoConsultation() {
+            alert('Starting your video consultation...');
+            window.location.href = 'chat.html'; // Redirects to the video chat page
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    display: flex; /* Enable flexbox on body */
+    flex-direction: column; /* Arrange children in a column */
+    min-height: 100vh; /* Ensure it covers full viewport height */
+    font-family: 'Arial', sans-serif;
+    background: url('/Images/sign.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background: rgba(0, 128, 128, 0.9); /* Teal */
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo styling */
+.logo h1 {
+    font-size: 2.5rem; /* Increased font size for better visibility */
+    font-weight: bold; /* Maintain bold weight */
+    color: #ffffff; /* White color for contrast on the teal background */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    letter-spacing: 1px; /* Slightly increase spacing between letters */
+    text-transform: uppercase; /* Make the text uppercase for a clean look */
+    transition: transform 0.3s ease; /* Add a transition effect */
+}
+
+.logo h1:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Navigation styles */
+nav {
+    flex: 1; /* Allow nav to grow and fill space */
+    display: flex;
+    justify-content: center; /* Center the nav items */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px; /* Increased space between nav items */
+}
+
+nav ul li {
+    position: relative; /* Position for the underline effect */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px; /* Increased padding for better click area */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Improved hover and active states */
+nav ul li a:hover {
+    color: #FFD700; /* Golden color on hover */
+    border-bottom: 3px solid #FFD700; /* Enhanced underline effect on hover */
+}
+
+/* Container styling */
+.container {
+    max-width: 600px;
+    margin: 80px auto; /* Center the container and add vertical space */
+    padding: 20px;
+    background: rgba(224, 255, 255, 0.9); /* Light teal for better contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+    flex: 1; /* Allow container to grow and push footer down */
+}
+
+/* Section headings */
+h2 {
+    color: #008080; /* Teal color for section headings */
+    margin-bottom: 20px;
+    text-align: center; /* Center align headings */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Button styling */
+.btn {
+    padding: 10px;
+    border-radius: 5px;
+    background: #008080; /* Teal for button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #20B2AA; /* Light Sea Green on hover */
+}
+
+/* Links for sign up/login */
+.link {
+    margin-top: 20px;
+    text-align: center; /* Center align text */
+}
+
+.link a {
+    color: #008080; /* Teal */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link a:hover {
+    color: #20B2AA; /* Light Sea Green on hover */
+}
+
+/* Footer styling */
+footer {
+    background: rgba(0, 128, 128, 0.9); /* Teal */
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - VitaCare</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            padding: 0 20px;
+            display: inline-block;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .appointment-button {
+            float: right;
+            padding: 10px 20px;
+        }
+
+        .cta-button {
+            background: #FFD700;
+            color: black;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .hero {
+            background: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-info, .contact-form {
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">
+            <h1>VitaCare</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="User.html">User</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="HealthInformation.html">Health Information</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="HealthLearning.html">Help & Learning</a></li>
+            </ul>
+        </nav>
+        <div class="appointment-button">
+            <a href="#" class="cta-button">Get Appointment!</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you!</p>
+    </section>
+
+    <!-- Main Content Section -->
+    <main class="container">
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <p>If you have any questions or inquiries, feel free to reach out to us using the information below:</p>
+            <ul>
+                <li><strong>Email:</strong> support@vitacare.com</li>
+                <li><strong>Phone:</strong> +256 778 312 860</li>
+                <li><strong>Address:</strong> 123 Health St, Mbarara city, HC 345</li>
+            </ul>
+        </section>
+
+        <section class="contact-form">
+            <h2>Get in Touch</h2>
+            <form onsubmit="return sendEmail();">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 VitaCare. All Rights Reserved. | <a href="#" style="color: white;">Privacy Policy</a> | <a href="#" style="color: white;">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        function sendEmail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const subject = 'Contact Us Form Submission from ' + name;
+            const body = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+
+            // Construct mailto link
+            window.location.href = `mailto:allanmurungika@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            return false; // Prevent default form submission
+        }
+    </script>
+
+</body>
+
+</html>

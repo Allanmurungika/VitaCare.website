@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Login</title>
+    <link rel="stylesheet" href="/CSS/D_login.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Doctor's Portal</h1>
+        <nav>
+            <a href="doctor_login.html">Login</a>
+            <a href="doctor_home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <h2>Doctor's Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username or Email:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p class="message">Don't have an account? <a href="doctor_signup.html">Register here</a></p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Here you would typically handle login logic, like sending data to the server
+            alert('Login functionality to be implemented');
+        });
+    </script>
+
+</body>
+</html>

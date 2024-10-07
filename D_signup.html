@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Signup</title>
+    <link rel="stylesheet" href="/CSS/D_signup.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+
+    <header>
+        <h1>Doctor's Portal</h1>
+        <nav>
+            <a href="doctor_login.html">Login</a>
+            <a href="doctor_home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="signup-container">
+        <h2>Doctor's Signup</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="specialty">Specialty:</label>
+                <select id="specialty" name="specialty" required>
+                    <option value="" disabled selected>Select your specialty</option>
+                    <option value="optician">Optician</option>
+                    <option value="cardiologist">Cardiologist</option>
+                    <option value="dermatologist">Dermatologist</option>
+                    <option value="pediatrician">Pediatrician</option>
+                    <option value="general_practitioner">General Practitioner</option>
+                    <option value="surgeon">Surgeon</option>
+                    <option value="dentist">Dentist</option>
+                    <option value="psychiatrist">Psychiatrist</option>
+                    <!-- Add more specialties as needed -->
+                </select>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <p class="message">Already have an account? <a href="doctor_login.html">Login here</a></p>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Here you would typically handle signup logic, like sending data to the server
+            alert('Signup functionality to be implemented');
+        });
+    </script>
+
+</body>
+</html>
